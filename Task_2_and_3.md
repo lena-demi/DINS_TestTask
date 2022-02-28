@@ -1,4 +1,5 @@
-# Задание 2. Тест-кейсы для запроса: GET /posts?userId=<id>&title=<title>
+# Задание 2. Тест-кейсы для запроса: 
+# GET /posts?userId=<id>&title=<title>
 
 1.	Отсутствует значение параметра title.
 Шаги к исполнению: выполнить запрос GET /posts?userId=5&title= 

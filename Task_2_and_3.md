@@ -1,6 +1,3 @@
-# DINS_TestTask
-Выполненное тестовое задание на позицию Intern QA automation (Collaboration Tool)**
-
 # Задание 2. Тест-кейсы для запроса: GET /posts?userId=<id>&title=<title>
 
 1.	Отсутствует значение параметра title.
@@ -50,7 +47,7 @@ GET /posts?userId=9&title=SAPIENTE+OMNIS+FUGIT+EOS
 9.	Уязвимость к XSS-атакам.
 Шаги к исполнению: выполнить запрос 
 GET /posts?userId=1&title=<script>alert(123)</script>
-Ожидаемый результат: Возвращается пустой список. **
+Ожидаемый результат: Возвращается пустой список.
 
 # Задание 3. Описание бага.
 

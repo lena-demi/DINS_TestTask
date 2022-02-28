@@ -1,7 +1,7 @@
 # Задание 2. Тест-кейсы для запроса: GET/posts?userId=<id>&title=<title>
 
 1.	Отсутствует значение параметра title. <br>
- <u>Шаги к исполнению:</u> выполнить запрос GET /posts?userId=5&title= <br>
+ <u>Шаги к исполнению: выполнить запрос GET /posts?userId=5&title= <br>
 Ожидаемый результат: возвращается пустой список.
  
 2.	Отсутствуют значения обоих параметров.<br>
@@ -23,21 +23,21 @@
  6.	Пробел в userId.<br>
 Шаги к исполнению: выполнить запрос GET /posts?userId=6%20&title=sit+vel+voluptatem+et+non+libero<br>
 Ожидаемый результат: Возвращается элемент, для которого userId=6, title=”sit vel voluptatem et non libero”:<br>
-{
-    "userId": 6,
-    "id": 55,
-    "title": "sit vel voluptatem et non libero",
-    "body": "debitis excepturi ea perferendis harum libero optio\neos accusamus cum fuga ut sapiente repudiandae\net ut incidunt omnis molestiae\nnihil ut eum odit"
+{<br>
+    "userId": 6,<br>
+    "id": 55,<br>
+    "title": "sit vel voluptatem et non libero",<br>
+    "body": "debitis excepturi ea perferendis harum libero optio\neos accusamus cum fuga ut sapiente repudiandae\net ut incidunt omnis molestiae\nnihil ut eum odit"<br>
   }
  
 7.	Лишний пробел в начале или конце значения title.<br>
 Шаги к исполнению: выполнить запрос GET /posts?userId=7&title=%20repudiandae+ea+animi+iusto%20 <br>
 Ожидаемый результат: Возвращается элемент, для которого userId=7, title=” repudiandae ea animi iusto”:<br>
-{
-    "userId": 7,
-    "id": 66,
-    "title": "repudiandae ea animi iusto",
-    "body": "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe"
+{<br>
+    "userId": 7,<br>
+    "id": 66,<br>
+    "title": "repudiandae ea animi iusto",<br>
+    "body": "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe"<br>
  }
  
 8.	Должна быть чувствительность к регистру.<br>

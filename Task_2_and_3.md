@@ -2,27 +2,27 @@
 
  <strong>1.	Отсутствует значение параметра title.</strong> <br>
  <ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=5&title= <br>
-Ожидаемый результат: возвращается пустой список.
+<ins>Ожидаемый результат: возвращается пустой список.
  
 <strong>2.	Отсутствуют значения обоих параметров.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=&title= <br>
-Ожидаемый результат: возвращается пустой список.
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=&title= <br>
+<ins>Ожидаемый результат:</ins> возвращается пустой список.
 
 <strong>3.	userId больше максимально возможного integer в js.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=9007199254740992&title=sed+ab+est+est<br>
-Ожидаемый результат: возвращается пустой список.
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=9007199254740992&title=sed+ab+est+est<br>
+<ins>Ожидаемый результат:</ins> возвращается пустой список.
 
 <strong>4.	 Строковые значения параметра userId.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=four&title=sed+ab+est+est<br>
-Ожидаемый результат: возвращается пустой список.
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=four&title=sed+ab+est+est<br>
+<ins>Ожидаемый результат:</ins> возвращается пустой список.
 
 <strong>5.	Десятичное число в качестве userId.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=3,2&title=sed+ab+est+est<br>
-Ожидаемый результат: возвращается пустой список.
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=3,2&title=sed+ab+est+est<br>
+<ins>Ожидаемый результат:</ins> возвращается пустой список.
 
  <strong>6.	Пробел в userId.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=6%20&title=sit+vel+voluptatem+et+non+libero<br>
-Ожидаемый результат: Возвращается элемент, для которого userId=6, title=”sit vel voluptatem et non libero”:<br>
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=6%20&title=sit+vel+voluptatem+et+non+libero<br>
+<ins>Ожидаемый результат:</ins> Возвращается элемент, для которого userId=6, title=”sit vel voluptatem et non libero”:<br>
 {<br>
     "userId": 6,<br>
     "id": 55,<br>
@@ -31,8 +31,8 @@
   }
  
 <strong>7.	Лишний пробел в начале или конце значения title.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=7&title=%20repudiandae+ea+animi+iusto%20 <br>
-Ожидаемый результат: Возвращается элемент, для которого userId=7, title=” repudiandae ea animi iusto”:<br>
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=7&title=%20repudiandae+ea+animi+iusto%20 <br>
+<ins>Ожидаемый результат:</ins> Возвращается элемент, для которого userId=7, title=” repudiandae ea animi iusto”:<br>
 {<br>
     "userId": 7,<br>
     "id": 66,<br>
@@ -41,12 +41,12 @@
  }
  
 <strong>8.	Должна быть чувствительность к регистру.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=9&title=SAPIENTE+OMNIS+FUGIT+EOS <br>
-Ожидаемый результат: Возвращается пустой список.
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=9&title=SAPIENTE+OMNIS+FUGIT+EOS <br>
+<ins>Ожидаемый результат:</ins> Возвращается пустой список.
  
 <strong>9.	Уязвимость к XSS-атакам.</strong><br>
-Шаги к исполнению: выполнить запрос GET /posts?userId=1&title=<script>alert(123)</script> <br>
-Ожидаемый результат: Возвращается пустой список.
+<ins>Шаги к исполнению:</ins> выполнить запрос GET /posts?userId=1&title=<script>alert(123)</script> <br>
+<ins>Ожидаемый результат:</ins> Возвращается пустой список.
 
 # Задание 3. Описание бага.
 
